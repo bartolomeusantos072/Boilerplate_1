@@ -27,11 +27,6 @@ RUN npm run build
 # Etapa 2: Produção
 FROM node:18-buster
 
-# Instala compatibilidade com libs nativas
-RUN apt-get update && apt-get install -y \
-    libc6-compat \
-    && rm -rf /var/lib/apt/lists/*
-
 # Define o diretório da aplicação
 WORKDIR /usr/src/app
 
