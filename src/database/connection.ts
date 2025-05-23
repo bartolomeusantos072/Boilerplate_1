@@ -1,7 +1,9 @@
 
 //pg é o pacote oficial do PostgreSQL para Node.js.
-import { Pool } from 'pg';
 //Pool é uma classe que gerencia múltiplas conexões com o banco, evitando abrir uma nova conexão para cada query.
+import { Pool } from 'pg';
+import dotenv from 'dotenv';
+dotenv.config();
 
 
 const pool = new Pool({
